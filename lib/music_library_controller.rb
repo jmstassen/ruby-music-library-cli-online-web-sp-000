@@ -41,7 +41,7 @@ class MusicLibraryController
     end
   end
 
-  def list_songs
+  def list_artists
     alphabetized_artist_all = Artist.all.uniq.sort_by {|artist| artist.name}
     list_number = 1
     alphabetized_artist_all.each do |artist|
