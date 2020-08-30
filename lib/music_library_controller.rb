@@ -97,27 +97,5 @@ class MusicLibraryController
     else
     end
   end
-
-
-  #   if choice = 0 || choice > @alphabetized_song_all.count
-  #   else
-  #     list_number = 1
-  #     @alphabetized_song_all.each do |song|
-  #       if list_number == choice
-  #         binding.pry
-  #         puts("Playing #{song.name} by #{song.artist.name}")
-  #       else
-  #       end
-  #       list_number += 1
-  #     end
-  #   end
-  # end
 end
-    # list_songs
-    # puts "Which song number would you like to play?"
-    # choice = gets.chomp
-    # # if choice.to_i.between?(1, @alphabetized_song_all.count)
-    # puts "Playing #{@alphabetized_song_all[choice.to_i - 1].name} by #{@alphabetized_song_all[choice.to_i - 1].artist.name}"
-    # # else
-    # # end
-#("1. Thundercat - For Love I Come - dance")
+
