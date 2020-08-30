@@ -50,6 +50,15 @@ class MusicLibraryController
     end
   end
 
+  def list_genres
+    alphabetized_genre_all = Genre.all.uniq.sort_by {|genre| genre.name}
+    list_number = 1
+    alphabetized_genre_all.each do |genre|
+      puts "#{list_number}. #{genre.name}"
+      list_number += 1
+    end
+  end
+
 
 #("1. Thundercat - For Love I Come - dance")
 end
