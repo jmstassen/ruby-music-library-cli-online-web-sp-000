@@ -5,6 +5,7 @@ class MusicLibraryController
   def initialize(path="./db/mp3s")
     importer = MusicImporter.new(path)
     importer.import
+    @alphabetized_song_all = Song.all.uniq.sort_by {|song| song.name}
   end
 
   def call
@@ -24,7 +25,6 @@ class MusicLibraryController
   end
 
   def list_songs
-    @alphabetized_song_all = Song.all.uniq.sort_by {|song| song.name}
     list_number = 1
     @alphabetized_song_all.each do |song|
       puts "#{list_number}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
