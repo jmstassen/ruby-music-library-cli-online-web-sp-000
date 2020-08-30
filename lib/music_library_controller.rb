@@ -94,8 +94,9 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     choice = gets.chomp.to_i
     if choice.between?(1, @alphabetized_song_all.count)
-
+      puts "yes"
     else
+      puts "no"
     end
   end
 
