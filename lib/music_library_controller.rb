@@ -72,7 +72,22 @@ class MusicLibraryController
       end
     else
     end
-end
+  end
+
+  def list_songs_by_genre
+    puts "Please enter the name of a genre:"
+    genre = gets.chomp
+    genre_requested = Genre.find_by_name(genre)
+    if genre_requested != nil
+      genre_songs_alphabetized = genre_requested.songs.sort_by {|song| song.name}
+      list_number = 1
+      genre_songs_alphabetized.each do |song|
+        puts "#{list_number}. #{song.name}"
+        list_number += 1
+      end
+    else
+    end
+  end
 
 #("1. Thundercat - For Love I Come - dance")
 end
