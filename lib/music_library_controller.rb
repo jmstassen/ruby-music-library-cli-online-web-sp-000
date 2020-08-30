@@ -84,7 +84,6 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     choice = gets.chomp
     choice = choice.to_i
-    binding.pry
     if choice = 0 || choice > @alphabetized_song_all.count
     else
       list_number = 0
