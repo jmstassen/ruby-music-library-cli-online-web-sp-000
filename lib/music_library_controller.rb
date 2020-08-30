@@ -96,6 +96,7 @@ class MusicLibraryController
     if choice.to_i <= @alphabetized_song_all.count
       puts "Playing #{@alphabetized_song_all[choice.to_i - 1].name} by #{@alphabetized_song_all[choice.to_i - 1].artist.name}"
     else
+      return nil
     end
   end
 #("1. Thundercat - For Love I Come - dance")
