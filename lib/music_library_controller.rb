@@ -83,20 +83,35 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     choice = gets.chomp
-    choice = choice.to_i
-    if choice = 0 || choice > @alphabetized_song_all.count
-    else
+    choice_int = choice.to_i
+    max = @alphabetized_song_all.count
+    if choice_int.between?(1, max)
       list_number = 1
       @alphabetized_song_all.each do |song|
-        if list_number == choice
-          binding.pry
+        if list_number == choice_int
           puts("Playing #{song.name} by #{song.artist.name}")
         else
         end
         list_number += 1
       end
+    else
     end
   end
+
+
+  #   if choice = 0 || choice > @alphabetized_song_all.count
+  #   else
+  #     list_number = 1
+  #     @alphabetized_song_all.each do |song|
+  #       if list_number == choice
+  #         binding.pry
+  #         puts("Playing #{song.name} by #{song.artist.name}")
+  #       else
+  #       end
+  #       list_number += 1
+  #     end
+  #   end
+  # end
 end
     # list_songs
     # puts "Which song number would you like to play?"
