@@ -59,6 +59,14 @@ class MusicLibraryController
     end
   end
 
+  def list_songs_by_artist
+    puts "enter an artist"
+    artist = gets.chomp
+    binding.pry
+    list_number = 1
+    artist.songs.each do |song|
+      puts "{list_number}. #{song.name}"
+
 
 #("1. Thundercat - For Love I Come - dance")
 end
