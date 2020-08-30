@@ -24,15 +24,6 @@ class MusicLibraryController
   end
 
   def list_songs
-    alphabetized_song_all = Song.all.uniq.sort_by {|song| song.name}
-    list_number = 1
-    alphabetized_song_all.each do |song|
-      puts "#{list_number}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
-      list_number += 1
-    end
-  end
-
-  def list_songs
     @alphabetized_song_all = Song.all.uniq.sort_by {|song| song.name}
     list_number = 1
     @alphabetized_song_all.each do |song|
@@ -90,7 +81,6 @@ class MusicLibraryController
   end
 
   def play_song
-    list_songs
     puts "Which song number would you like to play?"
     choice = gets.chomp
     choice = choice.to_i
