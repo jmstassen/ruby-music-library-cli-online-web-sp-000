@@ -64,7 +64,6 @@ class MusicLibraryController
     artist = gets.chomp
     Artist.find_by_name
 end
-end
 
 #("1. Thundercat - For Love I Come - dance")
 end
