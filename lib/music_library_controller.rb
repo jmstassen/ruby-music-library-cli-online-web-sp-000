@@ -89,5 +89,10 @@ class MusicLibraryController
     end
   end
 
+  def play_song
+    list_songs
+    puts "Choose a song:"
+    choice = gets.chomp
+    
 #("1. Thundercat - For Love I Come - dance")
 end
