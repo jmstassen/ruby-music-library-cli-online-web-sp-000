@@ -94,6 +94,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     choice = gets.chomp.to_i
     binding.pry
+  end
 
 end
     # list_songs
