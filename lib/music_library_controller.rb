@@ -86,7 +86,6 @@ class MusicLibraryController
     choice = choice.to_i
     binding.pry
     if choice = 0 || choice > @alphabetized_song_all.count
-      puts ""
     else
       list_number = 0
       @alphabetized_song_all.each do |song|
