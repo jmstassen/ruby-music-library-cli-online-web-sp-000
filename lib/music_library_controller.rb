@@ -62,7 +62,6 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     artist = gets.chomp
-    binding.pry
     list_number = 1
     artist.songs.each do |song|
       puts "{list_number}. #{song.name}"
