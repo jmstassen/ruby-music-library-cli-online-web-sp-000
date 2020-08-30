@@ -20,4 +20,10 @@ class MusicLibraryController
       user_input = gets.chomp
     end
   end
+
+  def list_songs
+    puts songs.all
+  end
+
+
 end
