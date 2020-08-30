@@ -86,7 +86,7 @@ class MusicLibraryController
     choice = choice.to_i
     if choice = 0 || choice > @alphabetized_song_all.count
     else
-      list_number = 0
+      list_number = 1
       @alphabetized_song_all.each do |song|
         if list_number == choice
           puts "Playing #{song.name} by #{song.artist.name}"
