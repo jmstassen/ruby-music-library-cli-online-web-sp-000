@@ -90,11 +90,16 @@ class MusicLibraryController
   end
 
   def play_song
+    list songs
     puts "Which song number would you like to play?"
     choice = gets.chomp
-
-  end
-
+    choice = choice.to_i
+    list_number = 0
+    @alphabetized_song_all.each do |song|
+      if list_number == choice
+        puts "Playing #{song.name} by #{song.artist.name}"
+        list_number += 1
+    end
 end
     # list_songs
     # puts "Which song number would you like to play?"
