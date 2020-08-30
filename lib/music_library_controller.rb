@@ -84,13 +84,17 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     choice = gets.chomp
     choice = choice.to_i
-    list_number = 0
-    @alphabetized_song_all.each do |song|
-      if list_number == choice
-        puts "Playing #{song.name} by #{song.artist.name}"
-        list_number += 1
-      else
-        list_number += 1
+    if choice = 0 || choice > @alphabetized_song_all.count
+      puts ""
+    else
+      list_number = 0
+      @alphabetized_song_all.each do |song|
+        if list_number == choice
+          puts "Playing #{song.name} by #{song.artist.name}"
+          list_number += 1
+        else
+          list_number += 1
+        end
       end
     end
   end
