@@ -24,9 +24,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    binding.pry
     puts Song.all
-
   end
 
 
