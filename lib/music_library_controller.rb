@@ -99,7 +99,10 @@ class MusicLibraryController
       if list_number == choice
         puts "Playing #{song.name} by #{song.artist.name}"
         list_number += 1
+      else
+      end
     end
+  end
 end
     # list_songs
     # puts "Which song number would you like to play?"
