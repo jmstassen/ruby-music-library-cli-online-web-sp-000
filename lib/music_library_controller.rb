@@ -32,6 +32,24 @@ class MusicLibraryController
     end
   end
 
+  def list_songs
+    alphabetized_song_all = Song.all.uniq.sort_by {|song| song.name}
+    list_number = 1
+    alphabetized_song_all.each do |song|
+      puts "#{list_number}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+      list_number += 1
+    end
+  end
+
+  def list_songs
+    alphabetized_artist_all = Artist.all.uniq.sort_by {|artist| artist.name}
+    list_number = 1
+    alphabetized_artist_all.each do |artist|
+      puts "#{list_number}. #{artist.name}"
+      list_number += 1
+    end
+  end
+
 
 #("1. Thundercat - For Love I Come - dance")
 end
