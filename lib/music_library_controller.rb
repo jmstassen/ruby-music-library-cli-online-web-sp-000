@@ -34,8 +34,4 @@ class MusicLibraryController
 
 
 #("1. Thundercat - For Love I Come - dance")
-    puts Song.all
-  end
-
-
 end
