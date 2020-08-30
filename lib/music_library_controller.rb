@@ -25,6 +25,7 @@ class MusicLibraryController
 
   def list_songs
     alphabetized_song_all = Song.all.sort_by(&:name)
+    binding.pry
     list_number = 1
     alphabetized_song_all.each do |song|
       puts "#{list_number}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
