@@ -39,13 +39,6 @@ class MusicLibraryController
   end
 
 
-
-
-
-
-      end
-  end
-
   def list_songs
     list_number = 1
     @alphabetized_song_all.each do |song|
