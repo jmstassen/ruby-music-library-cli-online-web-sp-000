@@ -98,7 +98,7 @@ class MusicLibraryController
     else
     end
   end
-    
+
     # list_songs
     # puts "Which song number would you like to play?"
     # choice = gets.chomp
