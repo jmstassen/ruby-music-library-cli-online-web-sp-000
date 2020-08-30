@@ -22,7 +22,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    puts songs.all
+    puts Songs.all
   end
 
 
