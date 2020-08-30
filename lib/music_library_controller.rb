@@ -66,7 +66,8 @@ class MusicLibraryController
     list_number = 1
     artist.songs.each do |song|
       puts "{list_number}. #{song.name}"
-
+end
+end
 
 #("1. Thundercat - For Love I Come - dance")
 end
