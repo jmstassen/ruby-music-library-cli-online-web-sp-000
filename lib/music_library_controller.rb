@@ -93,8 +93,8 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     list_songs
     choice = gets.chomp
-    binding.pry
     if choice.to_i <= @alphabetized_song_all.count
+      binding.pry
       puts "Playing #{@alphabetized_song_all[choice.to_i - 1].name} by #{@alphabetized_song_all[choice.to_i - 1].artist.name}"
     else
     end
