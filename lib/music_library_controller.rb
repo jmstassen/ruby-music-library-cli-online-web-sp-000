@@ -27,7 +27,7 @@ class MusicLibraryController
     alphabetized_song_all = Song.all.sort_by(&:name)
     list_number = 1
     alphabetized_song_all.each do |song|
-      puts "#{list_number}. #{song.artist} - #{song.name} - #{song.genre}"
+      puts "#{list_number}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       list_number += 1
     end
   end
