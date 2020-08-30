@@ -82,7 +82,7 @@ class MusicLibraryController
       genre_songs_alphabetized = genre_requested.songs.sort_by {|song| song.name}
       list_number = 1
       genre_songs_alphabetized.each do |song|
-        puts "#{list_number}. #{song.name}"
+        puts "#{list_number}. #{song.artist.name} - #{song.name}"
         list_number += 1
       end
     else
