@@ -60,7 +60,7 @@ class MusicLibraryController
   end
 
   def list_songs_by_artist
-    puts "enter an artist"
+    puts "Please enter the name of an artist"
     artist = gets.chomp
     binding.pry
     list_number = 1
