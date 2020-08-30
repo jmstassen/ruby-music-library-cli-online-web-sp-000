@@ -92,8 +92,11 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     list_songs
-    choice = gets.chomp
-    puts "Playing #{@alphabetized_song_all[choice.to_i - 1].name} by #{@alphabetized_song_all[choice.to_i - 1].artist.name}"
+    choice = gets.to_i.chomp
+    if choice <= @alphabetized_song_all.count
+      puts "Playing #{@alphabetized_song_all[choice.to_i - 1].name} by #{@alphabetized_song_all[choice.to_i - 1].artist.name}"
+    else
+    end
   end
 #("1. Thundercat - For Love I Come - dance")
 end
