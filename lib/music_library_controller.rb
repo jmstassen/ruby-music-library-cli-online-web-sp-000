@@ -90,8 +90,8 @@ class MusicLibraryController
   end
 
   def play_song
+    puts "Which song number would you like to play?"
     list_songs
-    puts "Choose a song:"
     choice = gets.chomp
   end
 #("1. Thundercat - For Love I Come - dance")
